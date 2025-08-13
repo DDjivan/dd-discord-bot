@@ -104,7 +104,7 @@ def get_dict_from_stream(username:str, config_file:str):
 ##————————————————————————————————————————————————————————————————————————————##
 
 if (__name__ == "__main__"):
-    config_file = "config.json"
+    config_file = "_config_twitch_api.json"
     example_stream_username = "couriway"
 
     print(get_dict_from_stream(example_stream_username, config_file))
