@@ -17,6 +17,10 @@ source .venv/bin/activate
 ```bash
 pip install requests py-cord
 ```
+5. Run the Python script.
+```bash
+python dd_discord_bot.py
+```
 
 ## Config files 
 ### `_config_discord_api.json` 
