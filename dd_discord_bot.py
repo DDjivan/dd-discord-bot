@@ -69,6 +69,7 @@ async def second_slash(
                                             "Le pseudonyme du compte Twitch."
                                             )
     ):
+    await ctx.defer()
 
     config_file = "_config_twitch_api.json"
 
