@@ -1,6 +1,23 @@
 # dd-discord-bot 
 DD's personal Discord bot 
 
+## Run 
+How to run the Discord bot. 
+
+1. Make sure the config files are set. 
+2. Make a Python virtual environment. 
+```bash
+python -m venv .venv
+```
+3. Activate the environment. 
+```bash
+source .venv/bin/activate
+```
+4. Make sure the required libraries are installed. 
+```bash
+pip install requests py-cord
+```
+
 ## Config files 
 ### `_config_discord_api.json` 
 Go to https://discord.com/developers/applications/ 
@@ -39,4 +56,10 @@ https://dev.twitch.tv/console/apps
 - Client Type: Confidential 
 
 The **Client Secret** will be shown only once, **and it can't be reset**! 
+
+## End notes 
+Thanks to LoahL and InSync on stackoverflow.com 
+
+https://stackoverflow.com/questions/71165431/how-do-i-make-a-working-slash-command-in-discord-py 
+
 
