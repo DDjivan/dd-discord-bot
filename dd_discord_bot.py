@@ -61,9 +61,9 @@ async def user_info(ctx):
 @bot.slash_command(
     name="stream_announcement",
     description="Annoncer un stream.",
-    guild_ids=[410481703958740992],
+    guild_ids=[410481703958740992, 722564006463799357],
 )
-async def second_slash(
+async def stream_announcement(
         ctx,
         pseudo_twitch: str = discord.Option(description=
                                             "Le pseudonyme du compte Twitch."
@@ -72,8 +72,10 @@ async def second_slash(
     await ctx.defer()
 
     config_file = "_config_twitch_api.json"
+    channel = bot.get_channel(1415445147113492541) # Send the message to #annonces
 
     user_nickname = ctx.author.nick
+    user_username = ctx.author.name # Use the username if the nickname is empty
 
     info_dict = get_dict_from_stream(pseudo_twitch, config_file)
     title = info_dict["stream_title"]
@@ -83,12 +85,12 @@ async def second_slash(
 
     output = f"""
 ***EN LIVE***
-**{user_nickname}** est en stream sur __{game}__ !
+**{user_nickname or user_username}** est en stream sur __{game}__ !
 **{title}**
 {url}
     """
-
-    await ctx.respond(output)
+    await channel.send(output)
+    await ctx.respond("Annonce envoyée !", ephemeral=True)
 
 
 
