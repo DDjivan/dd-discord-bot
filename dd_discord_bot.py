@@ -72,7 +72,7 @@ async def stream_announcement(
     await ctx.defer()
 
     config_file = "_config_twitch_api.json"
-    channel = bot.get_channel(1415445147113492541) # Send the message to #annonces
+    channel = bot.get_channel(722564006463799362) # Send the message to #annonces
 
     user_nickname = ctx.author.nick
     user_username = ctx.author.name # Use the username if the nickname is empty
